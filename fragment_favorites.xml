@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_DFE8F2"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/favoritesToolbar"
+        layout="@layout/include_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/lecturesTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorites_lectures"
+            android:textColor="@color/blue_14005C"
+            android:textSize="@dimen/text_22"
+            android:textAppearance="@style/NeueHaasUnica.Body1.Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/favoritesCountView"
+            android:layout_width="@dimen/dimen_14"
+            android:layout_height="wrap_content"
+            android:backgroundTintMode="screen"
+            android:gravity="center"
+            android:textAppearance="@style/NeueHaasUnica.Body1.Bold"
+            android:textColor="@color/middle_blue_5723F2"
+            android:textSize="@dimen/text_22"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="Вы пока не добавили в Избранное ни одной лекции"
+        android:textColor="@color/blue_14005C"
+        android:textSize="@dimen/text_20"
+        android:paddingBottom="@dimen/dimen_8"
+        android:textAppearance="@style/NeueHaasUnica.Body1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_2"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:background="@color/blue_14005C" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/downloadsTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorites_downloads"
+            android:textColor="@color/blue_14005C"
+            android:textSize="@dimen/text_22"
+            android:textAppearance="@style/NeueHaasUnica.Body1.Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/downloadsCountView"
+            android:layout_width="@dimen/dimen_14"
+            android:layout_height="wrap_content"
+            android:backgroundTintMode="screen"
+            android:gravity="center"
+            android:textAppearance="@style/NeueHaasUnica.Body1.Bold"
+            android:textColor="@color/middle_blue_5723F2"
+            android:textSize="@dimen/text_22"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:showDividers="middle"
+        android:divider="@drawable/views_divider">
+        
+        <LinearLayout
+            android:layout_width="164dp"
+            android:layout_height="112dp"
+            android:background="@color/blue_14005C"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_video_file"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 лекций"
+                android:textSize="@dimen/text_16"
+                android:textColor="@color/blue_DFE8F2"
+                android:textAppearance="@style/NeueHaasUnica.Body1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="164dp"
+            android:layout_height="112dp"
+            android:background="@color/blue_14005C"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 материалов"
+                android:textSize="@dimen/text_16"
+                android:textColor="@color/blue_DFE8F2"
+                android:textAppearance="@style/NeueHaasUnica.Body1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/downloadsLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="@dimen/dimen_16"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:padding="@dimen/dimen_16">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/downloadsTitleView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawablePadding="@dimen/dimen_12"-->
+<!--            android:text="@string/downloads_title"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Bold"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/text_16"-->
+<!--            app:drawableStartCompat="@drawable/ic_upload"-->
+<!--            app:drawableTint="@color/black"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/downloadsInfoView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dimen_8"-->
+<!--            android:text="@string/favorites_downloads_info"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Normal"-->
+<!--            android:textColor="@color/gray_979797"-->
+<!--            android:textSize="@dimen/text_13"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/downloadsTitleView" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/downloadsCountView"-->
+<!--            android:layout_width="26dp"-->
+<!--            android:layout_height="26dp"-->
+<!--            android:layout_marginEnd="@dimen/dimen_16"-->
+<!--            android:background="@drawable/bg_circle"-->
+<!--            android:backgroundTint="@color/gray_F2F2F2"-->
+<!--            android:backgroundTintMode="screen"-->
+<!--            android:gravity="center"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Normal"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/text_13"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/downloadsArrowImageView"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:text="5" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/downloadsArrowImageView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_arrow_right"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/favoritesLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="@dimen/dimen_16"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:padding="@dimen/dimen_16">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/favoritesTitleView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawablePadding="@dimen/dimen_12"-->
+<!--            android:text="@string/favorites_title"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Bold"-->
+<!--            android:textColor="@color/blue_14005C"-->
+<!--            android:textSize="@dimen/text_20"-->
+<!--            app:drawableStartCompat="@drawable/ic_mark"-->
+<!--            app:drawableTint="@color/black"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/favoritesInfoView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dimen_8"-->
+<!--            android:text="@string/favorites_info"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Normal"-->
+<!--            android:textColor="@color/gray_979797"-->
+<!--            android:textSize="@dimen/text_13"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/favoritesTitleView" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/favoritesCountView"-->
+<!--            android:layout_width="26dp"-->
+<!--            android:layout_height="26dp"-->
+<!--            android:layout_marginEnd="@dimen/dimen_16"-->
+<!--            android:background="@drawable/bg_circle"-->
+<!--            android:backgroundTint="@color/gray_F2F2F2"-->
+<!--            android:backgroundTintMode="screen"-->
+<!--            android:gravity="center"-->
+<!--            android:textAppearance="@style/TextStyleRoboto.Normal"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/text_13"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/favoritesArrowImageView"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:text="13" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/favoritesArrowImageView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_arrow_right"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</LinearLayout>
